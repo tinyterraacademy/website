@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Parent Handbook | Tiny Terra Academy</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.handbook-intro{max-width:720px;margin:0 auto 3rem;text-align:center;}
+.handbook-intro p{font-size:1.1rem;color:var(--text2);line-height:1.8;}
+.accordion-section{max-width:860px;margin:0 auto 4rem;}
+.accordion-section h2{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:700;color:var(--green);margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem;}
+.accordion-section h2 i{font-size:1.2rem;color:var(--gold);}
+.accordion-item{background:#fff;border:1.5px solid var(--border);border-radius:16px;margin-bottom:.8rem;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:box-shadow .2s;}
+.accordion-item:hover{box-shadow:0 4px 18px rgba(74,124,89,.13);}
+.accordion-header{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.4rem;cursor:pointer;font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem;color:var(--text);background:#fff;border:none;width:100%;text-align:left;gap:1rem;}
+.accordion-header:hover{background:var(--green-lt);}
+.accordion-header .acc-icon{width:34px;height:34px;border-radius:50%;background:var(--green-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--green);font-size:.85rem;transition:transform .3s,background .3s;}
+.accordion-item.open .acc-icon{transform:rotate(45deg);background:var(--green);color:#fff;}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.accordion-body.open{max-height:2000px;padding:0 1.4rem 1.4rem;}
+.accordion-body p,.accordion-body li{color:var(--text2);line-height:1.85;font-size:.97rem;}
+.accordion-body ul,.accordion-body ol{padding-left:1.4rem;margin:.5rem 0 1rem;}
+.accordion-body li{margin-bottom:.35rem;}
+.accordion-body h4{font-family:'Poppins',sans-serif;font-weight:600;color:var(--green);margin:1.2rem 0 .5rem;}
+.accordion-body .highlight-box{background:var(--green-lt);border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:.9rem 1.2rem;margin:1rem 0;font-size:.93rem;}
+.accordion-body .gold-box{background:#fffbf0;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:.9rem 1.2rem;margin:1rem 0;font-size:.93rem;}
+.rhythm-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;}
+.rhythm-table th{background:var(--green);color:#fff;padding:.6rem 1rem;text-align:left;font-family:'Poppins',sans-serif;}
+.rhythm-table td{padding:.6rem 1rem;border-bottom:1px solid var(--border);}
+.rhythm-table tr:nth-child(even) td{background:var(--green-lt);}
+.fee-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;}
+.fee-table th{background:var(--gold);color:#fff;padding:.6rem 1rem;text-align:left;font-family:'Poppins',sans-serif;}
+.fee-table td{padding:.6rem 1rem;border-bottom:1px solid #f0e8d0;}
+.fee-table tr:nth-child(even) td{background:#fffbf0;}
+.download-btn{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;padding:.7rem 1.6rem;border-radius:30px;font-weight:700;font-family:'Poppins',sans-serif;font-size:.9rem;text-decoration:none;margin-top:1rem;transition:transform .2s,box-shadow .2s;}
+.download-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(74,124,89,.35);}
+</style>
+</head>
+<body>
+
+<div id="nav-include"></div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div style="font-size:56px;margin-bottom:16px">📋</div>
+  <h1 class="page-hero-title">Parent Handbook</h1>
+  <p class="page-hero-sub">Everything you need to know about life at Tiny Terra Academy — our philosophy, daily rhythms, policies, and how we partner with families.</p>
+</div>
+
+<!-- ===== HANDBOOK INTRO ===== -->
+<section style="padding:4rem 2rem 1rem;">
+  <div class="handbook-intro reveal">
+    <p>We believe the parent-school relationship is a true partnership. This handbook is your guide to understanding how Tiny Terra works, what to expect each day, and how we keep your child safe, nourished, and joyfully growing. Please read it together as a family — and reach out any time you have questions.</p>
+    <a href="#" class="download-btn"><i class="fas fa-download"></i> Download PDF Version</a>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: WELCOME ===== -->
+<section style="padding:2rem 2rem;">
+  <div class="accordion-section reveal">
+    <h2><i class="fas fa-star"></i> 1. Welcome to Our Planet</h2>
+
+    <div class="accordion-item open">
+      <button class="accordion-header">
+        <span>A Letter from the Founders</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body open">
+        <p>Dear Tiny Terra Families,</p>
+        <p>Welcome to our little planet! We started Tiny Terra Academy with one big dream: to create a school where every child feels like the most important explorer in the world. A place where learning smells like fresh soil, sounds like laughter, and looks like a child fully absorbed in play.</p>
+        <p>We draw from the best of Japanese early-childhood wisdom — the quiet discipline of <em>ikigai</em>, the gentle persistence of <em>ganbatte</em>, the beauty of seasonal awareness — and blend it with India's rich tradition of storytelling, community, and warmth. The result is a school that is both globally inspired and rooted in our local culture.</p>
+        <p>Thank you for trusting us with your child's earliest years. We do not take that lightly.</p>
+        <div class="highlight-box">With gratitude and green thumbs,<br/><strong>The Tiny Terra Team</strong></div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Our Mission, Vision & Core Values</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>Mission</h4>
+        <p>To nurture whole children — curious, kind, confident, and rooted — through joyful, nature-connected early learning inspired by the best global pedagogies.</p>
+        <h4>Vision</h4>
+        <p>A world where every child's earliest years are filled with wonder, belonging, and the seeds of lifelong learning.</p>
+        <h4>Core Values</h4>
+        <ul>
+          <li><strong>Wonder:</strong> We protect the natural curiosity of childhood.</li>
+          <li><strong>Roots:</strong> Cultural identity is a source of strength, not limitation.</li>
+          <li><strong>Kindness:</strong> Empathy is practiced, not just taught.</li>
+          <li><strong>Grit:</strong> Gentle persistence is celebrated every day.</li>
+          <li><strong>Joy:</strong> Play is the highest form of work for a young child.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Admissions & Enrollment</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>Age Groups</h4>
+        <ul>
+          <li><strong>Playgroup:</strong> 1.5 – 2.5 years</li>
+          <li><strong>Nursery:</strong> 2.5 – 3.5 years</li>
+          <li><strong>LKG:</strong> 3.5 – 4.5 years</li>
+          <li><strong>UKG:</strong> 4.5 – 5.5 years</li>
+        </ul>
+        <h4>Enrollment Steps</h4>
+        <ol>
+          <li>Submit an enquiry via our website or call <strong>+91 7066838080</strong>.</li>
+          <li>Schedule a school visit / orientation tour.</li>
+          <li>Complete the registration form and pay the registration fee.</li>
+          <li>Submit required documents (birth certificate, immunization record, passport-size photos).</li>
+          <li>Receive your Welcome Kit before Day 1!</li>
+        </ol>
+        <div class="gold-box"><strong>Tip:</strong> We recommend a short orientation visit before your child's first full day. It helps enormously with the transition.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: PHILOSOPHY ===== -->
+<section style="padding:1rem 2rem;">
+  <div class="accordion-section reveal">
+    <h2><i class="fas fa-leaf"></i> 2. Educational Philosophy & Cultural Pillars</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Our Pedagogical Approach</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>Tiny Terra does not follow a single rigid curriculum. Instead, we curate the best elements from proven global frameworks and weave them into a cohesive, joyful daily experience:</p>
+        <h4>Montessori Principles</h4>
+        <p>Child-led learning, hands-on materials, mixed-age respect, and a prepared environment that invites independence. Children choose their work and develop intrinsic motivation.</p>
+        <h4>Reggio Emilia Approach</h4>
+        <p>The classroom is the "third teacher." Children are capable, creative researchers. Documentation of learning (art, projects, portfolios) makes thinking visible. Strong emphasis on the arts and collaborative inquiry.</p>
+        <h4>Forest School / Nature-Based Learning</h4>
+        <p>Regular outdoor time in natural settings. Risk-positive play, seasonal observation, gardening, and sensory nature experiences build resilience and environmental stewardship.</p>
+        <div class="highlight-box">We call this blend our <strong>"Seed of Potential Framework"</strong> — every child is a seed with unique gifts; our job is to provide the right soil, light, and water.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Japan-India Cultural Pillars</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>From Japan</h4>
+        <ul>
+          <li><strong>Ikigai</strong> — Finding purpose and joy in small, meaningful acts</li>
+          <li><strong>Ganbatte</strong> — Gentle, persistent effort; never giving up</li>
+          <li><strong>Wabi-sabi</strong> — Appreciating imperfection and the beauty of natural things</li>
+          <li><strong>Seasonal Awareness (Shizen)</strong> — Celebrating the rhythms of nature through art, food, and story</li>
+          <li><strong>Hansei</strong> — Age-appropriate self-reflection and emotional regulation</li>
+        </ul>
+        <h4>From India</h4>
+        <ul>
+          <li><strong>Storytelling (Katha)</strong> — Rich oral tradition, folk tales, and moral narratives</li>
+          <li><strong>Community & Seva</strong> — Belonging, sharing, and caring for others</li>
+          <li><strong>Celebration of Festivals</strong> — Cultural identity through joyful rituals</li>
+          <li><strong>Sanskrit Values</strong> — Ahimsa (non-violence), Satya (truth), Seva (service)</li>
+          <li><strong>Yoga & Pranayama</strong> — Age-appropriate movement and breathing for focus</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Domains of Learning (NEP 2020 Aligned)</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>Our curriculum addresses all five domains outlined in the NEP 2020 Early Childhood guidelines:</p>
+        <ul>
+          <li><strong>Physical Development:</strong> Gross/fine motor play, yoga, outdoor exploration</li>
+          <li><strong>Socio-Emotional Development:</strong> Emotion coaching, conflict resolution, empathy circles</li>
+          <li><strong>Cognitive Development:</strong> STEM provocations, problem-solving, inquiry projects</li>
+          <li><strong>Language & Literacy:</strong> Bilingual (English + Hindi/regional), phonics, storytelling, library time</li>
+          <li><strong>Creative & Aesthetic:</strong> Art, music, drama, nature crafts, clay, and loose parts</li>
+        </ul>
+        <div class="gold-box">Assessment at Tiny Terra is <strong>observation-based</strong>, not test-based. Teachers maintain portfolios and share learning stories with families each term.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: OPERATIONS ===== -->
+<section style="padding:1rem 2rem;">
+  <div class="accordion-section reveal">
+    <h2><i class="fas fa-clock"></i> 3. School Operations & Daily Life</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Daily Rhythm (8:00 AM – 5:00 PM)</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <table class="rhythm-table">
+          <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+          <tbody>
+            <tr><td>8:00 – 8:30 AM</td><td>Arrival, Morning Circle & Greeting Rituals</td></tr>
+            <tr><td>8:30 – 9:00 AM</td><td>Breakfast & Mindful Eating</td></tr>
+            <tr><td>9:00 – 10:00 AM</td><td>Structured Learning Block (Language / Numeracy)</td></tr>
+            <tr><td>10:00 – 10:45 AM</td><td>Outdoor Play & Nature Exploration</td></tr>
+            <tr><td>10:45 – 11:30 AM</td><td>Creative Arts / Sensory Play / STEM Provocation</td></tr>
+            <tr><td>11:30 AM – 12:00 PM</td><td>Story Time & Library</td></tr>
+            <tr><td>12:00 – 12:45 PM</td><td>Lunch & Rest</td></tr>
+            <tr><td>12:45 – 1:30 PM</td><td>Quiet Rest / Nap Time (Playgroup & Nursery)</td></tr>
+            <tr><td>1:30 – 2:30 PM</td><td>Free Choice / Montessori Work Cycle</td></tr>
+            <tr><td>2:30 – 3:15 PM</td><td>Music, Yoga, or Cultural Activity</td></tr>
+            <tr><td>3:15 – 3:45 PM</td><td>Snack & Wind-Down Circle</td></tr>
+            <tr><td>3:45 – 5:00 PM</td><td>Extended Care / Free Play (for full-day families)</td></tr>
+          </tbody>
+        </table>
+        <div class="highlight-box">Routine = Security. We keep the daily rhythm consistent so children always know what comes next — this dramatically reduces separation anxiety and supports emotional regulation.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Attendance, Punctuality & Holidays</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>Drop-off & Pick-up</h4>
+        <ul>
+          <li>Drop-off: <strong>8:00 – 8:30 AM</strong>. Please do not drop after 8:45 AM without prior notice.</li>
+          <li>Pick-up: <strong>12:30 PM</strong> (half-day) / <strong>3:45 PM</strong> (full-day) / <strong>5:00 PM</strong> (extended care).</li>
+          <li>Children will only be released to authorized adults listed in the enrollment form. Please carry a valid ID.</li>
+        </ul>
+        <h4>Absences</h4>
+        <ul>
+          <li>Notify us by <strong>8:00 AM</strong> on the day of absence via the school app or WhatsApp.</li>
+          <li>For illness lasting more than 2 days, a doctor's note is required for re-entry.</li>
+          <li>Planned leave (travel, family events) — please inform at least 3 days in advance.</li>
+        </ul>
+        <h4>Holidays</h4>
+        <p>A term-wise holiday calendar is shared at the start of each academic year. We observe major national, state, and cultural festivals — including both Indian and Japanese seasonal celebrations.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Fees, Payments & Refund Policy</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <table class="fee-table">
+          <thead><tr><th>Fee Type</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Registration Fee</td><td>One-time, non-refundable, paid at enrollment</td></tr>
+            <tr><td>Tuition Fee</td><td>Paid termly (3 terms per year) or monthly by prior arrangement</td></tr>
+            <tr><td>Annual Maintenance</td><td>Covers learning materials, art supplies, and facility upkeep</td></tr>
+            <tr><td>Meal Plan</td><td>Optional; covers breakfast, lunch, and snack. Fresh, home-style meals.</td></tr>
+            <tr><td>Extended Care</td><td>3:45 – 5:00 PM; charged separately per month</td></tr>
+          </tbody>
+        </table>
+        <h4>Payment Terms</h4>
+        <ul>
+          <li>Fees are due by the <strong>5th of each month</strong> (monthly) or the first day of each term.</li>
+          <li>A late fee applies after the 10th of the month.</li>
+          <li>Fee schedule for the current academic year is provided separately at admission.</li>
+        </ul>
+        <div class="gold-box"><strong>Refunds:</strong> Registration fees are non-refundable. For withdrawals mid-term, please refer to the fee agreement signed at enrollment. One month's notice is required for withdrawal.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>What to Bring (and Not Bring)</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>Please Bring Daily</h4>
+        <ul>
+          <li>A clearly labeled water bottle (no sugary drinks please)</li>
+          <li>A healthy, nut-free snack (if not on our meal plan)</li>
+          <li>A spare set of clothes in a labeled zip-lock bag</li>
+          <li>A small comfort item for Playgroup/Nursery children (if needed)</li>
+          <li>Sunscreen (applied before drop-off on outdoor days)</li>
+        </ul>
+        <h4>Please Do Not Bring</h4>
+        <ul>
+          <li>Toys from home (unless it is a designated "sharing day")</li>
+          <li>Screen devices / tablets / smartwatches</li>
+          <li>Candy, chips, or packaged junk food</li>
+          <li>Any item containing nuts (we are a nut-aware school)</li>
+        </ul>
+        <div class="highlight-box">Label everything! Children's belongings travel. A labeled bag, bottle, and spare clothes saves a lot of lost-and-found confusion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: HEALTH, SAFETY & NUTRITION ===== -->
+<section style="padding:1rem 2rem;">
+  <div class="accordion-section reveal">
+    <h2><i class="fas fa-shield-heart"></i> 4. Health, Safety & Nutrition</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Illness & Sickness Policy</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>The health of every child and staff member is our top priority. To protect the whole community:</p>
+        <ul>
+          <li>Children must be <strong>fever-free for 24 hours</strong> (without medication) before returning to school.</li>
+          <li>Children with vomiting or diarrhea must stay home for <strong>48 hours after the last episode</strong>.</li>
+          <li>If your child shows symptoms at school, you will be called immediately and must pick up within <strong>45 minutes</strong>.</li>
+          <li>Contagious conditions (chickenpox, conjunctivitis, hand-foot-mouth, etc.) require a <strong>doctor's clearance letter</strong> to return.</li>
+        </ul>
+        <div class="gold-box">We know it's hard to keep a mildly sick child home. Please trust that this policy protects your child too — a classroom of 12 little ones can spread illness very quickly!</div>
+        <h4>First Aid & Medical Emergencies</h4>
+        <p>All teaching staff are trained in Pediatric First Aid. A first-aid kit is maintained on-site. In the event of a serious injury or medical emergency, we will call emergency services first, then contact parents immediately. The nearest hospital and emergency numbers are posted in every classroom.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Allergies & Special Dietary Needs</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>Tiny Terra Academy is a <strong>nut-aware school</strong>. We take allergies very seriously.</p>
+        <ul>
+          <li>Disclose all known allergies and dietary restrictions on the enrollment form.</li>
+          <li>Children with severe allergies will have an individual action plan kept on file and shared with all staff.</li>
+          <li>If your child requires an EpiPen or other emergency medication, please provide a labeled supply to the class teacher at the start of each term.</li>
+          <li>Our meal plan menus are designed to be nut-free, low in processed sugar, and accommodate common dietary needs (vegetarian, Jain, gluten-sensitive, lactose-sensitive).</li>
+        </ul>
+        <div class="highlight-box">Update us immediately if your child develops a new allergy or intolerance during the year. Do not wait for the annual enrollment renewal.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Safety, Security & Child Protection</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>Physical Safety</h4>
+        <ul>
+          <li>All play equipment is age-appropriate, inspected regularly, and maintained.</li>
+          <li>Outdoor play areas are fully enclosed and supervised at all times.</li>
+          <li>Socket covers, rounded furniture edges, non-toxic materials, and locked storage for cleaning products are standard across all rooms.</li>
+          <li>Our staff-to-child ratios exceed the minimum regulatory requirements.</li>
+        </ul>
+        <h4>Access Control</h4>
+        <ul>
+          <li>The school gate is locked during school hours. All visitors must buzz in and sign the visitor register.</li>
+          <li>Only authorized pick-up persons listed in your enrollment form may collect your child. No exceptions.</li>
+          <li>If custody arrangements change, please inform us in writing immediately.</li>
+        </ul>
+        <h4>Child Protection Policy</h4>
+        <p>All staff at Tiny Terra Academy have undergone background verification. We maintain a strict child safeguarding policy. Any concern about a child's wellbeing — inside or outside school — will be handled with the utmost care, confidentiality, and in compliance with applicable child protection guidelines. Parents are encouraged to speak to the Principal if they have any concerns.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Nutrition & Meal Philosophy</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>We believe food is culture, connection, and nourishment. Our meal program is designed around the Japanese concept of <em>ichiju sansai</em> (one soup, three sides) adapted for Indian palates:</p>
+        <ul>
+          <li>Whole grains, fresh vegetables, and seasonal produce are the foundation</li>
+          <li>Dal, sabji, roti/rice, and a seasonal fruit or vegetable every day</li>
+          <li>No processed foods, no artificial colours, no refined sugar in school meals</li>
+          <li>Children are never forced to eat; we offer, encourage, and make it enjoyable</li>
+          <li>Monthly menus are shared in advance via the school app</li>
+        </ul>
+        <div class="gold-box">Children who bring lunch from home: please keep it warm in a thermal tiffin, nut-free, and avoid chips, candy, or sugary drinks. We eat together as a community and model mindful eating every day.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: COMMUNICATION ===== -->
+<section style="padding:1rem 2rem 4rem;">
+  <div class="accordion-section reveal">
+    <h2><i class="fas fa-comments"></i> 5. Communication & Community</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>How We Communicate with Families</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <h4>School App</h4>
+        <p>Our primary communication platform is the Tiny Terra school app. Through the app you can:</p>
+        <ul>
+          <li>View daily attendance and check-in/check-out records</li>
+          <li>Receive real-time photo/video updates from your child's day</li>
+          <li>Access monthly newsletters, event notices, and meal menus</li>
+          <li>Message your child's class teacher directly</li>
+          <li>Submit leave requests and absence notifications</li>
+          <li>Access your child's digital portfolio and learning stories</li>
+        </ul>
+        <div class="highlight-box">App login credentials are provided in your Welcome Kit on enrollment. Please download it and set up notifications before Day 1.</div>
+        <h4>WhatsApp & Phone</h4>
+        <p>For urgent matters (emergencies, same-day absences), reach us on <strong>+91 7066838080</strong> (call or WhatsApp). Please note that teacher WhatsApp groups are for school communication only — teacher wellbeing and after-hours boundaries are respected.</p>
+        <h4>Parent Notice Board</h4>
+        <p>A physical notice board outside each classroom door is updated weekly with learning themes, upcoming events, and any important notices. Take a moment to check it at drop-off!</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Parent-Teacher Meetings & Reporting</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <ul>
+          <li><strong>Term Reports:</strong> A narrative progress report is shared at the end of each of the 3 terms. Reports focus on development, not grades.</li>
+          <li><strong>Scheduled PTMs:</strong> Twice a year — at the end of Term 1 and Term 2. Slots are 20 minutes per family.</li>
+          <li><strong>As-Needed Conversations:</strong> If we observe something important, we will proactively reach out. Likewise, please do not hesitate to request a meeting anytime.</li>
+          <li><strong>Daily Handovers:</strong> At drop-off and pick-up, teachers share brief highlights or any notes about your child's day.</li>
+        </ul>
+        <div class="gold-box">We ask that formal concerns or feedback be raised with the class teacher first. If unresolved, escalate to the school coordinator, and then the Principal. We value open, respectful dialogue.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Parent Involvement & Community Events</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>At Tiny Terra, parents are not just observers — you are part of the village that raises the child. We invite you to:</p>
+        <ul>
+          <li><strong>Talent Sharing Sessions:</strong> Come in to share a skill, story, or cultural tradition with the class (cooking, craft, music, storytelling).</li>
+          <li><strong>Garden Days:</strong> Monthly parent volunteer slots for our school garden.</li>
+          <li><strong>Festival Celebrations:</strong> Join us for Diwali, Holi, Japanese New Year, and our seasonal Harvest Festival.</li>
+          <li><strong>Annual Day & Showcase:</strong> A joyful celebration of the year's learning — not a performance competition!</li>
+          <li><strong>Parent Circles:</strong> Quarterly informal parent gatherings to share experiences, discuss child development topics, and connect as a community.</li>
+        </ul>
+        <div class="highlight-box">Children whose parents are visibly engaged with school feel more secure and enthusiastic about learning. Even small gestures — reading the newsletter, waving hello to the teacher — make a big difference.</div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <span>Behaviour, Guidance & Positive Discipline</span>
+        <span class="acc-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="accordion-body">
+        <p>At Tiny Terra, we do not use punitive discipline. Our approach is based on <strong>positive guidance</strong> — helping children understand the impact of their behaviour, develop emotional vocabulary, and make better choices.</p>
+        <ul>
+          <li>We use <strong>redirection, co-regulation, and natural consequences</strong> — never time-outs, shaming, or physical correction.</li>
+          <li>Children who need extra support are observed closely; patterns are discussed with parents collaboratively.</li>
+          <li>We model the behaviour we want to see: calm, kind, clear, and consistent.</li>
+          <li>Biting, hitting, or persistent aggressive behaviour will be addressed immediately with the child, documented, and discussed with parents on the same day.</li>
+        </ul>
+        <div class="gold-box">Consistency between home and school helps enormously. If you are navigating a challenging behaviour phase, please talk to us — we can share strategies and work together as a team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section style="background:#fff;padding:60px 5%;">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div style="font-size:48px;margin-bottom:14px">💬</div>
+      <div class="cta-title">Questions Not Answered Here?</div>
+      <div class="cta-sub">We are always happy to chat. Reach out to us anytime — we love hearing from our families.</div>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-primary">Get in Touch</a>
+        <a href="tel:+917066838080" class="btn-outline">+91 7066838080</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-include"></div>
+
+<script src="includes.js"></script>
+<script>
+// Accordion
+document.querySelectorAll('.accordion-header').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.closest('.accordion-item');
+    const body=item.querySelector('.accordion-body');
+    const isOpen=item.classList.contains('open');
+    // close all in same section
+    item.closest('.accordion-section').querySelectorAll('.accordion-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.accordion-body').classList.remove('open');
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      body.classList.add('open');
+    }
+  });
+});
+
+</script>
+</body>
+</html>

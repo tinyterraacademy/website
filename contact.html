@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us | Tiny Terra Academy</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+/* ---- Contact page layout ---- */
+.contact-section{padding:4rem 2rem 5rem;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem;max-width:1100px;margin:0 auto;align-items:start;}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+
+/* Info column */
+.contact-info-col{display:flex;flex-direction:column;gap:1.5rem;}
+.info-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:1.6rem 1.8rem;display:flex;gap:1.2rem;align-items:flex-start;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;}
+.info-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(74,124,89,.13);}
+.info-icon{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--green2));display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;font-size:1.15rem;}
+.info-card h4{font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem;color:var(--text);margin:0 0 .3rem;}
+.info-card p,.info-card a{color:var(--text2);font-size:.95rem;line-height:1.7;text-decoration:none;}
+.info-card a:hover{color:var(--green);}
+
+/* WhatsApp card */
+.wa-card{background:linear-gradient(135deg,#25D366,#128C7E);border-radius:20px;padding:1.6rem 1.8rem;display:flex;gap:1.2rem;align-items:center;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(37,211,102,.25);}
+.wa-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.4);}
+.wa-icon{width:52px;height:52px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem;color:#fff;}
+.wa-card h4{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;margin:0 0 .2rem;}
+.wa-card p{color:rgba(255,255,255,.88);font-size:.9rem;margin:0;}
+
+/* Hours card */
+.hours-card{background:var(--green-lt);border:1.5px solid rgba(74,124,89,.2);border-radius:20px;padding:1.6rem 1.8rem;}
+.hours-card h4{font-family:'Poppins',sans-serif;font-weight:700;color:var(--green);margin:0 0 1rem;display:flex;align-items:center;gap:.5rem;}
+.hours-list{list-style:none;padding:0;margin:0;}
+.hours-list li{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px dashed rgba(74,124,89,.2);font-size:.92rem;color:var(--text2);}
+.hours-list li:last-child{border-bottom:none;}
+.hours-list li span{font-weight:700;color:var(--green);}
+
+/* Form column */
+.form-card{background:#fff;border:1.5px solid var(--border);border-radius:24px;padding:2.2rem 2.4rem;box-shadow:0 4px 24px rgba(0,0,0,.06);}
+.form-card h3{font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:700;color:var(--text);margin:0 0 .4rem;}
+.form-card .form-sub{color:var(--text2);font-size:.95rem;margin:0 0 1.8rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+@media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+.form-group{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem;}
+.form-group label{font-family:'Poppins',sans-serif;font-weight:600;font-size:.85rem;color:var(--text);}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--border);border-radius:12px;padding:.75rem 1rem;font-family:'Nunito',sans-serif;font-size:.95rem;color:var(--text);background:#fafaf8;outline:none;transition:border-color .2s,box-shadow .2s;width:100%;box-sizing:border-box;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(74,124,89,.12);background:#fff;}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7280' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;}
+.submit-btn{width:100%;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;border:none;border-radius:30px;padding:1rem;font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:.6rem;margin-top:.5rem;}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,124,89,.35);}
+.form-note{font-size:.8rem;color:var(--text2);text-align:center;margin-top:.8rem;}
+.success-msg{display:none;background:#e8f5e9;border:1.5px solid var(--green);border-radius:14px;padding:1.2rem 1.4rem;text-align:center;color:var(--green);font-weight:700;font-family:'Poppins',sans-serif;margin-top:1rem;}
+
+/* Map section */
+.map-section{padding:0 2rem 5rem;}
+.map-wrapper{max-width:1100px;margin:0 auto;}
+.map-wrapper h2{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem;}
+.map-wrapper h2 i{color:var(--green);}
+.map-embed{border-radius:24px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1);height:360px;background:var(--green-lt);display:flex;align-items:center;justify-content:center;}
+.map-placeholder{text-align:center;color:var(--text2);}
+.map-placeholder i{font-size:3rem;color:var(--green);margin-bottom:1rem;display:block;}
+.map-placeholder p{font-size:.95rem;}
+.map-placeholder a{color:var(--green);font-weight:700;text-decoration:none;}
+.map-placeholder a:hover{text-decoration:underline;}
+
+/* FAQ strip */
+.faq-strip{background:var(--green-lt);padding:4rem 2rem;}
+.faq-inner{max-width:860px;margin:0 auto;}
+.faq-inner h2{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:700;color:var(--green);text-align:center;margin-bottom:2rem;}
+.faq-item{background:#fff;border-radius:16px;margin-bottom:.8rem;overflow:hidden;border:1.5px solid var(--border);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.4rem;cursor:pointer;font-family:'Poppins',sans-serif;font-weight:600;font-size:.95rem;color:var(--text);border:none;background:#fff;width:100%;text-align:left;gap:1rem;}
+.faq-q:hover{background:var(--green-lt);}
+.faq-q .fq-icon{width:30px;height:30px;border-radius:50%;background:var(--green-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--green);font-size:.8rem;transition:transform .3s,background .3s;}
+.faq-item.open .fq-icon{transform:rotate(45deg);background:var(--green);color:#fff;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-a.open{max-height:300px;}
+.faq-a p{padding:.2rem 1.4rem 1.2rem;color:var(--text2);font-size:.92rem;line-height:1.8;margin:0;}
+</style>
+</head>
+<body>
+
+<div id="nav-include"></div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div style="font-size:56px;margin-bottom:16px">📞</div>
+  <h1 class="page-hero-title">Get in Touch</h1>
+  <p class="page-hero-sub">We would love to hear from you! Whether you have a question about admissions, want to schedule a visit, or just want to say hello — our door is always open.</p>
+</div>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- LEFT: Info -->
+    <div class="contact-info-col reveal">
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-phone"></i></div>
+        <div>
+          <h4>Call Us</h4>
+          <p><a href="tel:+917066838080">+91 7066838080</a></p>
+          <p style="font-size:.85rem;margin-top:.2rem;">Mon – Sat, 8:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <a href="https://wa.me/917066838080?text=Hi%20Tiny%20Terra!%20I%27d%20like%20to%20know%20more%20about%20admissions." class="wa-card" target="_blank" rel="noopener">
+        <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
+        <div>
+          <h4>Chat on WhatsApp</h4>
+          <p>Tap to start a conversation instantly</p>
+        </div>
+        <i class="fas fa-arrow-right" style="color:rgba(255,255,255,.7);margin-left:auto;"></i>
+      </a>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <h4>Email</h4>
+          <a href="mailto:hello@tinyterra.in">hello@tinyterra.in</a><br/>
+          <a href="mailto:admissions@tinyterra.in">admissions@tinyterra.in</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>Tiny Terra Academy<br/>
+          Near Greenway Park, Sector 12<br/>
+          Your City, Maharashtra, India</p>
+        </div>
+      </div>
+
+      <div class="hours-card">
+        <h4><i class="fas fa-clock"></i> School Hours</h4>
+        <ul class="hours-list">
+          <li>Half-Day Programme <span>8:00 AM – 12:30 PM</span></li>
+          <li>Full-Day Programme <span>8:00 AM – 3:45 PM</span></li>
+          <li>Extended Care <span>Up to 5:00 PM</span></li>
+          <li>Office Hours <span>8:00 AM – 6:00 PM</span></li>
+          <li>Saturday (Admin) <span>9:00 AM – 1:00 PM</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Enquiry Form -->
+    <div class="form-card reveal">
+      <h3>Admissions Enquiry</h3>
+      <p class="form-sub">Fill in the form below and we will get back to you within one school day.</p>
+
+      <!-- Formspree form — replace YOUR_FORM_ID with your actual Formspree endpoint -->
+      <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="parent-name">Parent / Guardian Name *</label>
+            <input type="text" id="parent-name" name="parent_name" placeholder="Your full name" required/>
+          </div>
+          <div class="form-group">
+            <label for="child-name">Child's Name *</label>
+            <input type="text" id="child-name" name="child_name" placeholder="Child's name" required/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com"/>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="child-dob">Child's Date of Birth *</label>
+            <input type="date" id="child-dob" name="child_dob" required/>
+          </div>
+          <div class="form-group">
+            <label for="programme">Programme of Interest *</label>
+            <select id="programme" name="programme" required>
+              <option value="" disabled selected>Select programme</option>
+              <option value="Playgroup (1.5–2.5 yrs)">Playgroup (1.5 – 2.5 yrs)</option>
+              <option value="Nursery (2.5–3.5 yrs)">Nursery (2.5 – 3.5 yrs)</option>
+              <option value="LKG (3.5–4.5 yrs)">LKG (3.5 – 4.5 yrs)</option>
+              <option value="UKG (4.5–5.5 yrs)">UKG (4.5 – 5.5 yrs)</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="start-date">Preferred Start Term</label>
+          <select id="start-date" name="start_term">
+            <option value="" disabled selected>When would you like to join?</option>
+            <option>This academic year (2026–27)</option>
+            <option>Next academic year (2027–28)</option>
+            <option>Just exploring for now</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message / Questions</label>
+          <textarea id="message" name="message" placeholder="Tell us a little about your child or any questions you have..."></textarea>
+        </div>
+
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none"/>
+        <input type="hidden" name="_subject" value="New Admissions Enquiry - Tiny Terra Academy"/>
+
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i> Send Enquiry
+        </button>
+        <p class="form-note">We respect your privacy. Your details are only used to respond to your enquiry.</p>
+      </form>
+
+      <div class="success-msg" id="success-msg">
+        <i class="fas fa-check-circle" style="font-size:1.4rem;display:block;margin-bottom:.4rem;"></i>
+        Thank you! We have received your enquiry and will be in touch within one school day.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<section class="map-section">
+  <div class="map-wrapper reveal">
+    <h2><i class="fas fa-map-marker-alt"></i> Find Us</h2>
+    <div class="map-embed">
+      <!-- Replace the src below with your actual Google Maps embed URL -->
+      <!-- To get embed URL: Google Maps > Share > Embed a map > Copy iframe src -->
+      <div class="map-placeholder">
+        <i class="fas fa-map-marked-alt"></i>
+        <p><strong>Tiny Terra Academy</strong><br/>Near Greenway Park, Sector 12, Maharashtra</p>
+        <p style="margin-top:.8rem;">
+          <a href="https://maps.google.com" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Open in Google Maps
+          </a>
+        </p>
+        <p style="font-size:.8rem;margin-top:1rem;color:#999;">Replace this placeholder with your Google Maps iframe embed once your location is confirmed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK FAQs ===== -->
+<section class="faq-strip">
+  <div class="faq-inner reveal">
+    <h2>Quick Answers</h2>
+
+    <div class="faq-item open">
+      <button class="faq-q">
+        <span>When can we schedule a school visit?</span>
+        <span class="fq-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="faq-a open">
+        <p>We welcome visits Monday to Friday between 9:00 AM and 11:00 AM, or on Saturday mornings by appointment. Call us on <strong>+91 7066838080</strong> or WhatsApp to book a slot. We love giving families a real feel for our space and culture before enrolling.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        <span>What is the admission process?</span>
+        <span class="fq-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="faq-a">
+        <p>Submit an enquiry (this form or a call), we will schedule a visit, you complete the registration form and pay the registration fee, submit documents (birth certificate, vaccination record, photos), and we send your Welcome Kit. The whole process can be done in 1–2 weeks.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        <span>Do you offer a trial day or orientation?</span>
+        <span class="fq-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="faq-a">
+        <p>Yes! We strongly encourage a short orientation session (1–2 hours) before your child's first full day. It helps children familiarise themselves with the space, the teachers, and the rhythm, and it dramatically reduces first-day anxiety for both children and parents.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        <span>Are you affiliated or recognised by any board?</span>
+        <span class="fq-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="faq-a">
+        <p>Tiny Terra Academy follows the NEP 2020 Early Childhood Education framework and is registered as a preschool under state education guidelines. We are not affiliated to any primary school board (CBSE/ICSE) as a preschool does not require such affiliation.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        <span>What transport options are available?</span>
+        <span class="fq-icon"><i class="fas fa-plus"></i></span>
+      </button>
+      <div class="faq-a">
+        <p>We currently do not operate a school bus. We recommend car-pooling with nearby families (we can help connect you!) or using a trusted cab service. Our location is accessible from the main road and has safe drop-off space. Contact us to discuss your specific situation.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section style="background:#fff;padding:60px 5%;">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div style="font-size:48px;margin-bottom:14px">🌿</div>
+      <div class="cta-title">Ready to Visit Our Planet?</div>
+      <div class="cta-sub">Come see Tiny Terra in action. We promise it will make you smile.</div>
+      <div class="cta-btns">
+        <a href="tel:+917066838080" class="btn-primary">📞 Call Now</a>
+        <a href="https://wa.me/917066838080?text=Hi!%20I%27d%20like%20to%20schedule%20a%20visit%20to%20Tiny%20Terra%20Academy." class="btn-outline" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-include"></div>
+
+<script src="includes.js"></script>
+<script>
+// Formspree AJAX submit
+const form=document.getElementById('enquiry-form');
+form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=form.querySelector('.submit-btn');
+  btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';
+  btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{
+      method:'POST',
+      body:new FormData(form),
+      headers:{Accept:'application/json'}
+    });
+    if(res.ok){
+      form.style.display='none';
+      document.getElementById('success-msg').style.display='block';
+    } else {
+      btn.innerHTML='<i class="fas fa-exclamation-circle"></i> Error — please try again';
+      btn.disabled=false;
+    }
+  } catch(err){
+    btn.innerHTML='<i class="fas fa-exclamation-circle"></i> Error — please try again';
+    btn.disabled=false;
+  }
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.closest('.faq-item');
+    const ans=item.querySelector('.faq-a');
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.faq-a').classList.remove('open');
+    });
+    if(!isOpen){item.classList.add('open');ans.classList.add('open');}
+  });
+});
+
+</script>
+</body>
+</html>
