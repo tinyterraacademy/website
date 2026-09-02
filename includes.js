@@ -19,7 +19,7 @@
     <li><a href="programs.html" data-page="programs">Programs</a></li>
     <li><a href="handbook.html" data-page="handbook">Handbook</a></li>
     <li><a href="contact.html" class="nav-cta" data-page="contact">Enquire Now</a></li>
-    <li><a href="https://www.instagram.com/tinyterra.academy" class="nav-insta" target="_blank" rel="noopener">&#128248; Instagram</a></li>
+    <li><a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" class="nav-insta" target="_blank" rel="noopener">&#128248; Instagram</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -31,7 +31,7 @@
   <a href="programs.html">&#127891; Programs</a>
   <a href="handbook.html">&#128203; Parent Handbook</a>
   <a href="contact.html">&#128222; Contact &amp; Enquire</a>
-  <a href="https://www.instagram.com/tinyterra.academy" target="_blank" rel="noopener">&#128248; Instagram</a>
+  <a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" rel="noopener">&#128248; Instagram</a>
 </div>`;
 
   // ---- FOOTER HTML ----
@@ -50,7 +50,7 @@
         <p class="footer-desc">We nurture every child as a seed of potential &mdash; through curiosity-led play, nature-based learning, and a community of care.</p>
         <div class="footer-social">
           <a class="soc-btn" href="https://wa.me/917066838080" target="_blank" title="WhatsApp">&#128172;</a>
-          <a class="soc-btn" href="https://www.instagram.com/tinyterra.academy" target="_blank" title="Instagram">&#128247;</a>
+          <a class="soc-btn" href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" title="Instagram">&#128247;</a>
           <a class="soc-btn" href="#" title="Facebook">&#128216;</a>
         </div>
       </div>
