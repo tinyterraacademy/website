@@ -3,12 +3,46 @@
 
 (function () {
 
-  // ---- DYNAMICALLY INJECT GOOGLE MATERIAL SYMBOLS ----
-  // This securely loads Google's modern icon framework as standard text rendering
-  var materialLink = document.createElement('link');
-  materialLink.rel = 'stylesheet';
-  materialLink.href = 'https://googleapis.com';
-  document.head.appendChild(materialLink);
+  // ---- CRITICAL: INJECT STANDARD FONT AWESOME CSS ----
+  var faLink = document.createElement('link');
+  faLink.rel = 'stylesheet';
+  faLink.href = 'https://cloudflare.com';
+  document.head.appendChild(faLink);
+
+  // ---- CRITICAL OVERRIDE CSS FOR SOCIAL BUTTON CONTENT ----
+  // This explicitly prevents text scrambling, sizing conflicts, or font family corruption
+  var customOverrideStyle = document.createElement('style');
+  customOverrideStyle.textContent = `
+    .footer-social {
+      display: flex !important;
+      gap: 10px !important;
+    }
+    .soc-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 40px !important;
+      height: 40px !important;
+      text-decoration: none !important;
+    }
+    .soc-btn i {
+      font-family: "Font Awesome 6 Brands" !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      font-size: 18px !important;
+    }
+    .footer-links i {
+      font-family: "Font Awesome 6 Free" !important;
+      font-weight: 900 !important;
+      font-style: normal !important;
+      font-size: 16px !important;
+      display: inline-block !important;
+      width: 20px !important;
+      margin-right: 8px !important;
+      text-align: center !important;
+    }
+  `;
+  document.head.appendChild(customOverrideStyle);
 
   // ---- NAVBAR HTML ----
   var NAVBAR_HTML = `
@@ -56,9 +90,9 @@
         </div>
         <p class="footer-desc">We nurture every child as a seed of potential &mdash; through curiosity-led play, nature-based learning, and a community of care.</p>
         <div class="footer-social">
-          <a class="soc-btn" href="https://wa.me" target="_blank" title="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
-          <a class="soc-btn" href="https://instagram.com" target="_blank" title="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
-          <a class="soc-btn" href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+          <a class="soc-btn" href="https://wa.me" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="soc-btn" href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="soc-btn" href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
       <div>
@@ -83,9 +117,9 @@
       <div>
         <div class="footer-col-title">Contact</div>
         <ul class="footer-links">
-          <li><a href="tel:+917066838080"><span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px; font-size: 18px;">call</span> +91 70668 38080</a></li>
-          <li><a href="https://wa.me" target="_blank"><span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px; font-size: 18px;">chat</span> WhatsApp Us</a></li>
-          <li><a href="contact.html"><span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px; font-size: 18px;">mail</span> Send Enquiry</a></li>
+          <li><a href="tel:+917066838080"><i class="fa-solid fa-phone"></i> +91 70668 38080</a></li>
+          <li><a href="https://wa.me" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Send Enquiry</a></li>
         </ul>
       </div>
     </div>
@@ -104,7 +138,6 @@
     if (navHolder) {
       navHolder.innerHTML = NAVBAR_HTML;
 
-      // Mark active pages
       var page = location.pathname.split('/').pop().replace('.html', '') || 'index';
       navHolder.querySelectorAll('[data-page]').forEach(function (a) {
         if (a.getAttribute('data-page') === page) {
@@ -112,7 +145,6 @@
         }
       });
 
-      // Navbar scroll listener
       window.addEventListener('scroll', function () {
         var nb = document.getElementById('navbar');
         if (nb) nb.classList.toggle('scrolled', window.scrollY > 20);
