@@ -8,7 +8,6 @@
   var faLink = document.createElement('link');
   faLink.rel = 'stylesheet';
   faLink.href = 'https://cloudflare.com';
-  faLink.crossOrigin = 'anonymous';
   document.head.appendChild(faLink);
 
   // ---- NAVBAR HTML ----
