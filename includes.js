@@ -3,10 +3,12 @@
 
 (function () {
 
-  // ---- DYNAMICALLY INJECT FONT AWESOME (SVG REPLACEMENT ENGINE) ----
-  var faScript = document.createElement('script');
-  faScript.src = 'https://cloudflare.com';
-  document.head.appendChild(faScript);
+  // ---- SAFE CSS ICON LINK INJECTOR ----
+  // Runs immediately to start downloading Font Awesome 6 icons securely
+  var faLink = document.createElement('link');
+  faLink.rel = 'stylesheet';
+  faLink.href = 'https://cloudflare.com';
+  document.head.appendChild(faLink);
 
   // ---- NAVBAR HTML ----
   var NAVBAR_HTML = `
@@ -95,50 +97,35 @@
   </div>
 </footer>`;
 
-  // ---- INJECT NAVBAR ----
-  var navHolder = document.getElementById('nav-include');
-  if (navHolder) {
-    navHolder.innerHTML = NAVBAR_HTML;
+  // ---- EXECUTE LAYOUT INJECTION ENGINE ----
+  function injectLayout() {
+    // 1. Inject Navbar
+    var navHolder = document.getElementById('nav-include');
+    if (navHolder) {
+      navHolder.innerHTML = NAVBAR_HTML;
 
-    // Mark the active link based on current filename
-    var page = location.pathname.split('/').pop().replace('.html', '') || 'index';
-    navHolder.querySelectorAll('[data-page]').forEach(function (a) {
-      if (a.getAttribute('data-page') === page) {
-        a.classList.add('active');
-      }
-    });
+      // Mark active pages
+      var page = location.pathname.split('/').pop().replace('.html', '') || 'index';
+      navHolder.querySelectorAll('[data-page]').forEach(function (a) {
+        if (a.getAttribute('data-page') === page) {
+          a.classList.add('active');
+        }
+      });
 
-    // Navbar scroll shadow effect
-    window.addEventListener('scroll', function () {
-      var nb = document.getElementById('navbar');
-      if (nb) nb.classList.toggle('scrolled', window.scrollY > 20);
-    });
-  }
+      // Navbar scroll listener
+      window.addEventListener('scroll', function () {
+        var nb = document.getElementById('navbar');
+        if (nb) nb.classList.toggle('scrolled', window.scrollY > 20);
+      });
+    }
 
-  // ---- INJECT FOOTER ----
-  var footerHolder = document.getElementById('footer-include');
-  if (footerHolder) {
-    footerHolder.innerHTML = FOOTER_HTML;
-  }
+    // 2. Inject Footer
+    var footerHolder = document.getElementById('footer-include');
+    if (footerHolder) {
+      footerHolder.innerHTML = FOOTER_HTML;
+    }
 
-  // ---- FORCE FONT AWESOME TO RENDER DYNAMIC ICONS ----
-  // This tells the engine to re-scan the page right after HTML injection finishes
-  if (window.FontAwesome) {
-    window.FontAwesome.DOM.i2svg();
-  } else {
-    faScript.addEventListener('load', function () {
-      if (window.FontAwesome) window.FontAwesome.DOM.i2svg();
-    });
-  }
-
-  // ---- MOBILE MENU TOGGLE ----
-  window.toggleMenu = function () {
-    var m = document.getElementById('mobileMenu');
-    if (m) m.classList.toggle('open');
-  };
-
-  // ---- SCROLL REVEAL ----
-  window.addEventListener('DOMContentLoaded', function () {
+    // 3. Trigger Scroll Observer
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) e.target.classList.add('visible');
@@ -147,6 +134,20 @@
     document.querySelectorAll('.reveal').forEach(function (el) {
       observer.observe(el);
     });
-  });
+  }
+
+  // ---- INTUITIVE LIFECYCLE CONTROLLER ----
+  // Ensures HTML runs safely even if script runs before or after DOM structures finish rendering
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectLayout);
+  } else {
+    injectLayout();
+  }
+
+  // ---- MOBILE MENU TOGGLE ----
+  window.toggleMenu = function () {
+    var m = document.getElementById('mobileMenu');
+    if (m) m.classList.toggle('open');
+  };
 
 })();
