@@ -49,9 +49,9 @@
         </div>
         <p class="footer-desc">We nurture every child as a seed of potential &mdash; through curiosity-led play, nature-based learning, and a community of care.</p>
         <div class="footer-social">
-          <a class="soc-btn" href="https://wa.me/917066838080" target="_blank" title="WhatsApp">&#128172;</a>
-          <a class="soc-btn" href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" title="Instagram">&#128247;</a>
-          <a class="soc-btn" href="#" title="Facebook">&#128216;</a>
+          <a class="soc-btn" href="https://wa.me/917066838080" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a class="soc-btn" href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+<a class="soc-btn" href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
       <div>
@@ -76,9 +76,9 @@
       <div>
         <div class="footer-col-title">Contact</div>
         <ul class="footer-links">
-          <li><a href="tel:+917066838080">&#128222; +91 70668 38080</a></li>
-          <li><a href="https://wa.me/917066838080" target="_blank">&#128172; WhatsApp Us</a></li>
-          <li><a href="contact.html">&#9993;&#65039; Send Enquiry</a></li>
+<li><a href="tel:+917066838080"><i class="fa-solid fa-phone"></i> +91 70668 38080</a></li>
+<li><a href="https://wa.me/917066838080" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></li>
+<li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Send Enquiry</a></li>
         </ul>
       </div>
     </div>
