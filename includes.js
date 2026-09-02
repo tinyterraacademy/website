@@ -49,7 +49,7 @@
   var NAVBAR_HTML = `
 <nav class="navbar" id="navbar">
   <a class="nav-brand" href="index.html">
-    <img src="asset/tiny_terra_logo.svg" class="nav-logo" alt="🌿">
+    <img src="asset/tiny_terra_logo1.svg" class="nav-logo" alt="🌿">
     <div>
       <div class="nav-name">Tiny Terra Academy</div>
       <div class="nav-sub">A Little Planet for Your Little One</div>
