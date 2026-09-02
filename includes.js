@@ -3,12 +3,12 @@
 
 (function () {
 
-  // ---- SAFE CSS ICON LINK INJECTOR ----
-  // Runs immediately to start downloading Font Awesome 6 icons securely
-  var faLink = document.createElement('link');
-  faLink.rel = 'stylesheet';
-  faLink.href = 'https://cloudflare.com';
-  document.head.appendChild(faLink);
+  // ---- DYNAMICALLY INJECT GOOGLE MATERIAL SYMBOLS ----
+  // This securely loads Google's modern icon framework as standard text rendering
+  var materialLink = document.createElement('link');
+  materialLink.rel = 'stylesheet';
+  materialLink.href = 'https://googleapis.com';
+  document.head.appendChild(materialLink);
 
   // ---- NAVBAR HTML ----
   var NAVBAR_HTML = `
@@ -56,9 +56,9 @@
         </div>
         <p class="footer-desc">We nurture every child as a seed of potential &mdash; through curiosity-led play, nature-based learning, and a community of care.</p>
         <div class="footer-social">
-          <a class="soc-btn" href="https://wa.me" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a class="soc-btn" href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a class="soc-btn" href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="soc-btn" href="https://wa.me" target="_blank" title="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+          <a class="soc-btn" href="https://instagram.com" target="_blank" title="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a class="soc-btn" href="#" title="Facebook"><span class="material-symbols-outlined">facebook</span></a>
         </div>
       </div>
       <div>
@@ -83,9 +83,9 @@
       <div>
         <div class="footer-col-title">Contact</div>
         <ul class="footer-links">
-          <li><a href="tel:+917066838080"><i class="fa-solid fa-phone"></i> +91 70668 38080</a></li>
-          <li><a href="https://wa.me" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></li>
-          <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Send Enquiry</a></li>
+          <li><a href="tel:+917066838080"><span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px; font-size: 18px;">call</span> +91 70668 38080</a></li>
+          <li><a href="https://wa.me" target="_blank"><span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px; font-size: 18px;">chat</span> WhatsApp Us</a></li>
+          <li><a href="contact.html"><span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 4px; font-size: 18px;">mail</span> Send Enquiry</a></li>
         </ul>
       </div>
     </div>
@@ -136,8 +136,7 @@
     });
   }
 
-  // ---- INTUITIVE LIFECYCLE CONTROLLER ----
-  // Ensures HTML runs safely even if script runs before or after DOM structures finish rendering
+  // ---- RUN CONTROLLER ----
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', injectLayout);
   } else {
