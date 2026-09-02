@@ -3,12 +3,11 @@
 
 (function () {
 
-  // ---- DYNAMICALLY INJECT FONT AWESOME ----
-  // This automatically loads Font Awesome CSS programmatically so the footer icons work
-  var faLink = document.createElement('link');
-  faLink.rel = 'stylesheet';
-  faLink.href = 'https://cloudflare.com';
-  document.head.appendChild(faLink);
+  // ---- DYNAMICALLY INJECT FONT AWESOME (SVG REPLACEMENT ENGINE) ----
+  // This loads the JS framework to instantly swap icon classes into crisp inline SVGs
+  var faScript = document.createElement('script');
+  faScript.src = 'https://cloudflare.com('/css/', '/js/');
+  document.head.appendChild(faScript);
 
   // ---- NAVBAR HTML ----
   var NAVBAR_HTML = `
