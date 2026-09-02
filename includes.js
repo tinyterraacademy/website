@@ -3,11 +3,19 @@
 
 (function () {
 
+  // ---- DYNAMICALLY INJECT FONT AWESOME ----
+  // This automatically loads Font Awesome CSS programmatically so the footer icons work
+  var faLink = document.createElement('link');
+  faLink.rel = 'stylesheet';
+  faLink.href = 'https://cloudflare.com';
+  faLink.crossOrigin = 'anonymous';
+  document.head.appendChild(faLink);
+
   // ---- NAVBAR HTML ----
   var NAVBAR_HTML = `
 <nav class="navbar" id="navbar">
   <a class="nav-brand" href="index.html">
-    <div class="nav-logo">&#127807;</div>
+    <div class="nav-logo">🌿</div>
     <div>
       <div class="nav-name">Tiny Terra Academy</div>
       <div class="nav-sub">A Little Planet for Your Little One</div>
@@ -19,19 +27,19 @@
     <li><a href="programs.html" data-page="programs">Programs</a></li>
     <li><a href="handbook.html" data-page="handbook">Handbook</a></li>
     <li><a href="contact.html" class="nav-cta" data-page="contact">Enquire Now</a></li>
-    <li><a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" class="nav-insta" target="_blank" rel="noopener">&#128248; Instagram</a></li>
+    <li><a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" class="nav-insta" target="_blank" rel="noopener">📸 Instagram</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">&#127968; Home</a>
-  <a href="about.html">&#127807; About Us</a>
-  <a href="programs.html">&#127891; Programs</a>
-  <a href="handbook.html">&#128203; Parent Handbook</a>
-  <a href="contact.html">&#128222; Contact &amp; Enquire</a>
-  <a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" rel="noopener">&#128248; Instagram</a>
+  <a href="index.html">🏠 Home</a>
+  <a href="about.html">🌿 About Us</a>
+  <a href="programs.html">🎓 Programs</a>
+  <a href="handbook.html">📋 Parent Handbook</a>
+  <a href="contact.html">📞 Contact &amp; Enquire</a>
+  <a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" rel="noopener">📸 Instagram</a>
 </div>`;
 
   // ---- FOOTER HTML ----
@@ -41,7 +49,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <div class="footer-logo-icon">&#127807;</div>
+          <div class="footer-logo-icon">🌿</div>
           <div>
             <div class="footer-brand-name">Tiny Terra Academy</div>
             <div class="footer-brand-sub">A Little Planet for Your Little One</div>
@@ -85,7 +93,7 @@
     <hr class="footer-divider">
     <div class="footer-bottom">
       <span>&copy; 2026 Tiny Terra Academy. All rights reserved.</span>
-      <span>Made with &#127807; in India</span>
+      <span>Made with 🌿 in India</span>
     </div>
   </div>
 </footer>`;
