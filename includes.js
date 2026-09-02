@@ -61,7 +61,7 @@
     <li><a href="programs.html" data-page="programs">Programs</a></li>
     <li><a href="handbook.html" data-page="handbook">Handbook</a></li>
     <li><a href="contact.html" class="nav-cta" data-page="contact">Enquire Now</a></li>
-    <li><a href="https://instagram.com" class="nav-insta" target="_blank" rel="noopener">📸 Instagram</a></li>
+    <li><a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" class="nav-insta" target="_blank" rel="noopener">📸 Instagram</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -73,7 +73,7 @@
   <a href="programs.html">🎓 Programs</a>
   <a href="handbook.html">📋 Parent Handbook</a>
   <a href="contact.html">📞 Contact &amp; Enquire</a>
-  <a href="https://instagram.com" target="_blank" rel="noopener">📸 Instagram</a>
+  <a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" rel="noopener">📸 Instagram</a>
 </div>`;
 
   // ---- FOOTER HTML ----
@@ -92,11 +92,11 @@
         <p class="footer-desc">We nurture every child as a seed of potential &mdash; through curiosity-led play, nature-based learning, and a community of care.</p>
         <div class="footer-social">
           <!-- WhatsApp Icon -->
-          <a class="soc-btn-svg" href="https://wa.me" target="_blank" title="WhatsApp">
+          <a class="soc-btn-svg" href="https://wa.me/917066838080" target="_blank" title="WhatsApp">
             <svg viewBox="0 0 448 512"><path fill="#25D366" d="M386.7 121.2c-42.5-42.5-99-65.9-159.2-65.9-124 0-224.9 101-224.9 224.9 0 39.6 10.3 78.2 30 112.4L0 512l125.1-32.8c32.8 17.9 69.6 27.3 107.4 27.3 124 0 225-101 225-224.9 0-60.2-23.4-116.7-65.8-159.2zM227.1 469.7c-33.6 0-66.6-9-95.2-26.1l-6.8-4-70.8 18.5 18.8-69.2-4.4-7c-18.8-29.8-28.7-64.3-28.7-100 0-104.7 85.2-190 190-190 50.7 0 98.4 19.8 134.2 35.6s65.4 83.3 65.4 134.2c0 104.6-85.2 190-190 190zm104.1-142.3c-5.7-2.8-33.8-16.7-39-18.6-5.2-1.9-9-2.8-12.8 2.8-3.8 5.7-14.8 18.6-18 22.3-3.3 3.8-6.6 4.3-12.3 1.4-5.7-2.8-24-8.8-45.7-28.2-16.9-15.1-28.3-33.8-31.6-39.5-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.7-6.6 8.6-10 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-10s-12.8-30.8-17.5-42.2c-4.6-11.2-9.3-9.7-12.8-9.9-3.3-.2-7.1-.2-10.9-.2s-10 1.4-15.2 7.1c-5.2 5.7-20 19.5-20 47.5s20.4 55.1 23.2 58.9c2.8 3.8 40.2 61.4 97.4 86.2 13.6 5.9 24.2 9.4 32.5 12.1 13.7 4.4 26.2 3.8 36.1 2.3 11-1.6 33.8-13.8 38.5-27.2 4.8-13.3 4.8-24.7 3.3-27.2-1.4-2.4-5.2-3.8-10.9-6.6z"/></svg>
           </a>
           <!-- Instagram Icon -->
-          <a class="soc-btn-svg" href="https://instagram.com" target="_blank" title="Instagram">
+          <a class="soc-btn-svg" href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" title="Instagram">
             <svg viewBox="0 0 448 512"><path fill="#E1306C" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.4c-41.1 0-74.5-33.3-74.5-74.5s33.3-74.5 74.5-74.5 74.5 33.3 74.5 74.5-33.4 74.5-74.5 74.5zm146.9-194c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9s-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.8 9.9 67.6 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2s34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8zM402.4 392c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
           </a>
           <!-- Facebook Icon -->
@@ -136,8 +136,8 @@
           </li>
           <!-- WhatsApp List Link -->
           <li>
-            <a href="https://wa.me" target="_blank" class="contact-link-with-svg">
-              <svg viewBox="0 0 448 512"><path fill="#ffffff" d="M386.7 121.2c-42.5-42.5-99-65.9-159.2-65.9-124 0-224.9 101-224.9 224.9 0 39.6 10.3 78.2 30 112.4L0 512l125.1-32.8c32.8 17.9 69.6 27.3 107.4 27.3 124 0 225-101 225-224.9 0-60.2-23.4-116.7-65.8-159.2zM227.1 469.7c-33.6 0-66.6-9-95.2-26.1l-6.8-4-70.8 18.5 18.8-69.2-4.4-7c-18.8-29.8-28.7-64.3-28.7-100 0-104.7 85.2-190 190-190 50.7 0 98.4 19.8 134.2 35.6s65.4 83.3 65.4 134.2c0 104.6-85.2 190-190 190zm104.1-142.3c-5.7-2.8-33.8-16.7-39-18.6-5.2-1.9-9-2.8-12.8 2.8-3.8 5.7-14.8 18.6-18 22.3-3.3 3.8-6.6 4.3-12.3 1.4-5.7-2.8-24-8.8-45.7-28.2-16.9-15.1-28.3-33.8-31.6-39.5-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.7-6.6 8.6-10 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-10s-12.8-30.8-17.5-42.2c-4.6-11.2-9.3-9.7-12.8-9.9-3.3-.2-7.1-.2-10.9-.2s-10 1.4-15.2 7.1c-5.2 5.7-20 19.5-20 47.5s20.4 55.1 23.2 58.9c2.8 3.8(40.2 61.4 97.4 86.2 13.6 5.9 24.2 9.4 32.5 12.1 13.7 4.4 26.2 3.8 36.1 2.3 11-1.6 33.8-13.8 38.5-27.2 4.8-13.3 4.8-24.7 3.3-27.2-1.4-2.4-5.2-3.8-10.9-6.6z"/></svg>
+            <a href="https://wa.me/917066838080" target="_blank" class="contact-link-with-svg">
+              <svg viewBox="0 0 448 512"><path fill="#ffffff" d="M386.7 121.2c-42.5-42.5-99-65.9-159.2-65.9-124 0-224.9 101-224.9 224.9 0 39.6 10.3 78.2 30 112.4L0 512l125.1-32.8c32.8 17.9 69.6 27.3 107.4 27.3 124 0 225-101 225-224.9 0-60.2-23.4-116.7-65.8-159.2zM227.1 469.7c-33.6 0-66.6-9-95.2-26.1l-6.8-4-70.8 18.5 18.8-69.2-4.4-7c-18.8-29.8-28.7-64.3-28.7-100 0-104.7 85.2-190 190-190 50.7 0 98.4 19.8 134.2 35.6s65.4 83.3 65.4 134.2c0 104.6-85.2 190-190 190zm104.1-142.3c-5.7-2.8-33.8-16.7-39-18.6-5.2-1.9-9-2.8-12.8 2.8-3.8 5.7-14.8 18.6-18 22.3-3.3 3.8-6.6 4.3-12.3 1.4-5.7-2.8-24-8.8-45.7-28.2-16.9-15.1-28.3-33.8-31.6-39.5-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.7-6.6 8.6-10 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-10s-12.8-30.8-17.5-42.2c-4.6-11.2-9.3-9.7-12.8-9.9-3.3-.2-7.1-.2-10.9-.2s-10 1.4-15.2 7.1c-5.2 5.7-20 19.5-20 47.5s20.4 55.1 23.2 58.9c2.8 3.8 40.2 61.4 97.4 86.2 13.6 5.9 24.2 9.4 32.5 12.1 13.7 4.4 26.2 3.8 36.1 2.3 11-1.6 33.8-13.8 38.5-27.2 4.8-13.3 4.8-24.7 3.3-27.2-1.4-2.4-5.2-3.8-10.9-6.6z"/></svg>
               WhatsApp Us
             </a>
           </li>
@@ -163,4 +163,50 @@
   function injectLayout() {
     // 1. Inject Navbar
     var navHolder = document.getElementById('nav-include');
-if (navHolder) {navHolder.innerHTML = NAVBAR_HTML;var page = location.pathname.split('/').pop().replace('.html', '') || 'index';navHolder.querySelectorAll('[data-page]').forEach(function (a) {if (a.getAttribute('data-page') === page) {a.classList.add('active');}});window.addEventListener('scroll', function () {var nb = document.getElementById('navbar');if (nb) nb.classList.toggle('scrolled', window.scrollY > 20);});}// 2. Inject Footervar footerHolder = document.getElementById('footer-include');if (footerHolder) {footerHolder.innerHTML = FOOTER_HTML;}// 3. Trigger Scroll Observervar observer = new IntersectionObserver(function (entries) {entries.forEach(function (e) {if (e.isIntersecting) e.target.classList.add('visible');});}, { threshold: 0.1 });document.querySelectorAll('.reveal').forEach(function (el) {observer.observe(el);});}// ---- RUN CONTROLLER ----if (document.readyState === 'loading') {document.addEventListener('DOMContentLoaded', injectLayout);} else {injectLayout();}// ---- MOBILE MENU TOGGLE ----window.toggleMenu = function () {var m = document.getElementById('mobileMenu');if (m) m.classList.toggle('open');};})();
+    if (navHolder) {
+      navHolder.innerHTML = NAVBAR_HTML;
+
+      var page = location.pathname.split('/').pop().replace('.html', '') || 'index';
+      navHolder.querySelectorAll('[data-page]').forEach(function (a) {
+        if (a.getAttribute('data-page') === page) {
+          a.classList.add('active');
+        }
+      });
+
+      window.addEventListener('scroll', function () {
+        var nb = document.getElementById('navbar');
+        if (nb) nb.classList.toggle('scrolled', window.scrollY > 20);
+      });
+    }
+
+    // 2. Inject Footer
+    var footerHolder = document.getElementById('footer-include');
+    if (footerHolder) {
+      footerHolder.innerHTML = FOOTER_HTML;
+    }
+
+    // 3. Trigger Scroll Observer
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
+  // ---- RUN CONTROLLER ----
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectLayout);
+  } else {
+    injectLayout();
+  }
+
+  // ---- MOBILE MENU TOGGLE ----
+  window.toggleMenu = function () {
+    var m = document.getElementById('mobileMenu');
+    if (m) m.classList.toggle('open');
+  };
+
+})();
