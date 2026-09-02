@@ -4,7 +4,6 @@
 (function () {
 
   // ---- DYNAMICALLY INJECT FONT AWESOME (SVG REPLACEMENT ENGINE) ----
-  // This loads the clean JavaScript version to display your icons without font/CORS errors
   var faScript = document.createElement('script');
   faScript.src = 'https://cloudflare.com';
   document.head.appendChild(faScript);
@@ -25,7 +24,7 @@
     <li><a href="programs.html" data-page="programs">Programs</a></li>
     <li><a href="handbook.html" data-page="handbook">Handbook</a></li>
     <li><a href="contact.html" class="nav-cta" data-page="contact">Enquire Now</a></li>
-    <li><a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" class="nav-insta" target="_blank" rel="noopener">📸 Instagram</a></li>
+    <li><a href="https://instagram.com" class="nav-insta" target="_blank" rel="noopener">📸 Instagram</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -37,7 +36,7 @@
   <a href="programs.html">🎓 Programs</a>
   <a href="handbook.html">📋 Parent Handbook</a>
   <a href="contact.html">📞 Contact &amp; Enquire</a>
-  <a href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" rel="noopener">📸 Instagram</a>
+  <a href="https://instagram.com" target="_blank" rel="noopener">📸 Instagram</a>
 </div>`;
 
   // ---- FOOTER HTML ----
@@ -55,8 +54,8 @@
         </div>
         <p class="footer-desc">We nurture every child as a seed of potential &mdash; through curiosity-led play, nature-based learning, and a community of care.</p>
         <div class="footer-social">
-          <a class="soc-btn" href="https://wa.me/917066838080" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a class="soc-btn" href="https://www.instagram.com/tinyterra_preschool_bavdhan/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="soc-btn" href="https://wa.me" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="soc-btn" href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a class="soc-btn" href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
@@ -83,7 +82,7 @@
         <div class="footer-col-title">Contact</div>
         <ul class="footer-links">
           <li><a href="tel:+917066838080"><i class="fa-solid fa-phone"></i> +91 70668 38080</a></li>
-          <li><a href="https://wa.me/917066838080" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></li>
+          <li><a href="https://wa.me" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></li>
           <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Send Enquiry</a></li>
         </ul>
       </div>
@@ -120,6 +119,16 @@
   var footerHolder = document.getElementById('footer-include');
   if (footerHolder) {
     footerHolder.innerHTML = FOOTER_HTML;
+  }
+
+  // ---- FORCE FONT AWESOME TO RENDER DYNAMIC ICONS ----
+  // This tells the engine to re-scan the page right after HTML injection finishes
+  if (window.FontAwesome) {
+    window.FontAwesome.DOM.i2svg();
+  } else {
+    faScript.addEventListener('load', function () {
+      if (window.FontAwesome) window.FontAwesome.DOM.i2svg();
+    });
   }
 
   // ---- MOBILE MENU TOGGLE ----
